@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "vue-serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "vue-build": "vue-cli-service build",
     "dr-start": "nodemon index.js"
   },
   "dependencies": {

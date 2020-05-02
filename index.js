@@ -1,23 +1,31 @@
 const express = require('express');
 const app = express();
 const puppeteer = require('puppeteer');
-const ua = require("useragent");
+const ua = require('useragent');
+const http = require('http');
 
-function isBot (ua) {
+var path = require("path");
+
+function isBot (useragent) {
 	const agent = ua.is(useragent);
 	return !agent.webkit && !agent.opera && !agent.ie &&
         !agent.chrome && !agent.safari && !agent.mobile_safari &&
         !agent.firefox && !agent.mozilla && !agent.android;
 }
 
-const VueBuild = "./dist/"
+const VueBuild = express.static(__dirname + '/dist')
 app.use(VueBuild)
 
-const port = 3000;
+const port = process.env.PORT || 3000;
 
-app.get('*', async (req, res) => {
+app.use('*', async (req, res) => {
+	
+	console.log('Agent', !isBot(req.headers['user-agent']))
+
 	if (!isBot(req.headers['user-agent'])) {
-		res.sendFile(`${VueBuild}/index.html`)
+
+		res.sendFile(__dirname + '/dist/index.html');
+
 	} else {
 		try {
 			const browser = await puppeteer.launch()
@@ -41,3 +49,5 @@ app.get('*', async (req, res) => {
 app.listen(port, () => {
     console.log(`Web server is running at port ${port}`);
 });
+
+// http.createServer(app).listen(80)
