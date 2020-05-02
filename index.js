@@ -39,6 +39,8 @@ app.use('*', async (req, res) => {
                 return document.documentElement.innerHTML;
             });
 
+            console.log(html)
+
             res.send(html);
 		} catch (err) {
 			res.send(err)
