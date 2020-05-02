@@ -2,7 +2,13 @@ const express = require('express');
 const app = express();
 const puppeteer = require('puppeteer');
 const ua = require('useragent');
-const http = require('http');
+
+var pathEnv = '/.env'
+if (process.env.NODE_ENV == 'development') {
+	pathEnv = '/.env.local'
+}
+
+require('dotenv').config({path: __dirname + pathEnv})
 
 var path = require("path");
 
@@ -15,8 +21,9 @@ function isBot (useragent) {
 
 // const VueBuild = express.static(path.join(__dirname, 'dist'))
 // app.use(VueBuild)
+const dir = process.env.FE_DIR;
 
-const dist = path.join(__dirname, 'dist');
+const dist = path.join(__dirname, dir);
 
 const port = process.env.PORT || 3000;
 
@@ -26,7 +33,7 @@ const port = process.env.PORT || 3000;
 const RENDER_CACHE = new Map();
 
 const uAgentMiddleware = async (req, res, next) => {
-	const local_url = `${req.protocol}://${req.get('host')}/${req.originalUrl}`
+	const local_url = `${process.env.BASE_URL}/${req.originalUrl}`
 
 	if (!isBot(req.headers['user-agent'])) {
 		next ()
