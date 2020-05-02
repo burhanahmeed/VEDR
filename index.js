@@ -33,7 +33,8 @@ const port = process.env.PORT || 3000;
 const RENDER_CACHE = new Map();
 
 const uAgentMiddleware = async (req, res, next) => {
-	const local_url = `${process.env.BASE_URL}/${req.originalUrl}`
+	const local_url = `${process.env.BASE_URL}${req.originalUrl}`
+	console.log(`${process.env.BASE_URL}${req.originalUrl}`)
 
 	if (!isBot(req.headers['user-agent'])) {
 		next ()
