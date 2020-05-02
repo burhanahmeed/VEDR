@@ -8,7 +8,7 @@
     "vue-serve": "vue-cli-service serve",
     "vue-build": "vue-cli-service build",
     "dr-start": "nodemon index.js",
-    "start": "vue-cli-service build && nodemon index.js"
+    "start": "nodemon index.js"
   },
   "dependencies": {
     "core-js": "^3.6.4",
