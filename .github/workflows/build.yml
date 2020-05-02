@@ -21,9 +21,10 @@ jobs:
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
+    
+    - name: Install Dependencies
+      run: npm install
 
     # Runs a set of commands using the runners shell
-    - name: Install package and Build
-      run: |
-        npm install,
-        npm run vue-build
+    - name: Build
+      run: npm run vue-build
