@@ -22,12 +22,13 @@ export default {
 		  },
 		  meta: [
 		  	{ name: 'description', content: 'This is an example page of VERD (Vue Express Dynamic Rendering) created by Kusiaga.' },
-		  	{ property: 'og:image', name: 'og:image', content: this.$vedrhost + '/og.png' },
-		  	{ property: 'og:description', name: 'og:description', content: 'For facebook crawler. This is an example page of VERD (Vue Express Dynamic Rendering) created by Kusiaga.' },
+		  	{ property: 'og:image:url', content: this.$vedrhost + '/og.png' },
+		  	{ property: 'og:description', content: 'For facebook crawler. This is an example page of VERD (Vue Express Dynamic Rendering) created by Kusiaga.' },
 
 		  	{ name: 'twitter:card', content: 'summary_large_image' },
+		  	{ name: 'twitter:title', content: 'Vue Express Dynamic Rendering - Kusiaga' },
 		  	{ name: 'twitter:description', content: 'For twitter crawler. This is an example page of VERD (Vue Express Dynamic Rendering) created by Kusiaga.' },
-		  	{ name: 'twitter:image', content: this.$vedrhost + '/og.png' },
+		  	{ name: 'twitter:image', content: this.$vedrhost + '/og.jpg' },
 		  ]
 		}
 	},
