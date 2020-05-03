@@ -7,7 +7,7 @@
   "scripts": {
     "vue-serve": "vue-cli-service serve",
     "vue-build": "vue-cli-service build",
-    "dev": "NODE_ENV=development nodemon index.js",
+    "dev": "vue-cli-service serve && NODE_ENV=development nodemon index.js",
     "start": "NODE_ENV=production nodemon index.js"
   },
   "dependencies": {
