@@ -9,6 +9,8 @@ Vue.use(VueMeta, {
   refreshOnceOnNavigation: true
 })
 
+Vue.prototype.$vedrhost = location.protocol+'//'+location.hostname+(location.port ? ':'+location.port: '');
+
 Vue.config.productionTip = false
 
 new Vue({
