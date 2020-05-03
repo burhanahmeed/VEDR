@@ -46,7 +46,12 @@ const uAgentMiddleware = async (req, res, next) => {
 			    res.send(htmls);
 			    return;
 		  	}
-			const browser = await puppeteer.launch()
+			const browser = await puppeteer.launch({
+			  'args' : [
+			    '--no-sandbox',
+			    '--disable-setuid-sandbox'
+			  ]
+			})
 			const page = await browser.newPage();
 			await page.setUserAgent('Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36');
 			// const local_url = 'http://localhost:' + port + req.originalUrl;
