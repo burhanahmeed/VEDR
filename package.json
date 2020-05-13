@@ -14,11 +14,14 @@
   },
   "scripts": {
     "vue-serve": "vue-cli-service serve",
-    "vue-build": "vue-cli-service build",
-    "dev": "NODE_ENV=development nodemon index.js",
-    "start": "NODE_ENV=production nodemon index.js"
+    "build": "vue-cli-service build",
+    "dev": "NODE_ENV=development nodemon service/index.js",
+    "start": "NODE_ENV=production nodemon service/index.js",
+    "serve": "nodemon --exec 'vue-cli-service serve'"
   },
   "dependencies": {
+    "app-root-path": "^3.0.0",
+    "body-parser": "^1.19.0",
     "core-js": "^3.6.4",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
