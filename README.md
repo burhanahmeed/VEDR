@@ -1,7 +1,8 @@
 
 # Vue Express Dynamic Rendering (VEDR)
-##### by Kusiaga
 This dynamic rendering boilerplate is still in development mode and feel free to make pull request.
+
+Latest update: on development branch (dev_v1).
 
 ## Project setup
 Clone project from repository to your local development.
