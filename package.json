@@ -1,19 +1,31 @@
 {
   "name": "dynamic-rendering",
   "description": "Vue Express Dynamic Rendering",
+  "author": "Burhanuddin Ahmad Kusiaga",
   "version": "0.1.0",
   "private": true,
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/burhanahmeed/vue-express-dynamic-rendering.git"
+  },
+  "bugs": {
+    "url": "https://github.com/burhanahmeed/vue-express-dynamic-rendering/issues"
+  },
   "scripts": {
     "vue-serve": "vue-cli-service serve",
-    "vue-build": "vue-cli-service build",
-    "dev": "vue-cli-service serve && NODE_ENV=development nodemon index.js",
-    "start": "NODE_ENV=production nodemon index.js"
+    "build": "vue-cli-service build",
+    "dev": "NODE_ENV=development nodemon service/index.js",
+    "start": "NODE_ENV=production nodemon service/index.js",
+    "serve": "nodemon --exec 'vue-cli-service serve'"
   },
   "dependencies": {
+    "app-root-path": "^3.0.0",
+    "body-parser": "^1.19.0",
     "core-js": "^3.6.4",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "mongoose": "^5.9.14",
     "nodemon": "^2.0.3",
     "puppeteer": "^3.0.2",
     "useragent": "^2.3.0",

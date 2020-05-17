@@ -3,7 +3,7 @@
     <img alt="Vue logo" src="../assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/>
     <h2>BASE URL: {{ $vedrhost }}</h2>
-  </div>
+  </div> 
 </template>
 
 <script>

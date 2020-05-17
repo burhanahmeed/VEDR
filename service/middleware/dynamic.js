@@ -1,16 +1,10 @@
-const express = require('express');
-const app = express();
 const puppeteer = require('puppeteer');
 const ua = require('useragent');
 
-var pathEnv = '/.env'
-if (process.env.NODE_ENV == 'development') {
-	pathEnv = '/.env.local'
-}
-
-require('dotenv').config({path: __dirname + pathEnv})
-
-var path = require("path");
+/**
+	Middleware to check its user agent
+*/
+const RENDER_CACHE = new Map();
 
 function isBot (useragent) {
 	const agent = ua.is(useragent);
@@ -18,19 +12,6 @@ function isBot (useragent) {
         !agent.chrome && !agent.safari && !agent.mobile_safari &&
         !agent.firefox && !agent.mozilla && !agent.android;
 }
-
-// const VueBuild = express.static(path.join(__dirname, 'dist'))
-// app.use(VueBuild)
-const dir = process.env.FE_DIR;
-
-const dist = path.join(__dirname, dir);
-
-const port = process.env.PORT || 3000;
-
-/**
-	Middleware to check its user agent
-*/
-const RENDER_CACHE = new Map();
 
 const uAgentMiddleware = async (req, res, next) => {
 	const local_url = `${process.env.BASE_URL}${req.originalUrl}`
@@ -73,26 +54,4 @@ const uAgentMiddleware = async (req, res, next) => {
 	}
 }
 
-app.use(uAgentMiddleware)
-
-app.use('/', express.static(dist));
-
-app.use('*', (req, res) => {
-
-	res.sendFile(path.join(dist, 'index.html'));
-
-	// if (!isBot(req.headers['user-agent'])) {
-
-	// 	// res.sendFile(__dirname + '/dist/index.html');
-	// 	res.sendFile(path.join(dist, 'index.html'));
-
-	// } else {
-		
-	// }
-})
-
-app.listen(port, () => {
-    console.log(`Web server is running at port ${port}`);
-});
-
-// http.createServer(app).listen(80)
+module.exports = uAgentMiddleware
