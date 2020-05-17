@@ -1,7 +1,7 @@
 const databaseList = {
     mongodb: [
         {
-            url: process.env.MONGO_URL_ONE
+            url: process.env.MONGODB_PRIMARY
         }
     ]
 }
