@@ -1,7 +1,7 @@
 const databaseList = {
     mongodb: [
         {
-            url: process.env.MONGODB_PRIMARY
+            url: process.env.MONGODB_PRIMARY || 'mongodb://127.0.0.1/somedb'
         }
     ]
 }
