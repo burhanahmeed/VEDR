@@ -7,5 +7,6 @@ const UserController = require('../controllers/users.controller');
  * endpoint '/api/users/'
  */
 router.get('/', UserController.getUser);
+router.get('/mongodb', UserController.getUserFromMongoDB);
 
 module.exports = router;

@@ -1,4 +1,4 @@
-module.exports = database = require('./database/output.js');
+module.exports.database = require('./database/output');
 
 
 
