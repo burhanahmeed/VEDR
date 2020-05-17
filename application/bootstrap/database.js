@@ -5,6 +5,7 @@ const databaseList = {
         }
     ]
 }
+const databaseStatus = true;
 
 class Database {
     constructor (databaseConnection, dbname) {
@@ -16,6 +17,9 @@ class Database {
     getConnection (number) {
         if (!number) {
             number = 0;
+        }
+        if (!databaseStatus) {
+            return null;
         }
         if (this.connection[number]) {
             return this.connection[number];
