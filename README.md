@@ -1,6 +1,6 @@
 
 # VEDR - A Fullstack Dynamic Rendering Boilerplate
-![VEDR](header.jpg)
+[![VEDR](https://i.ibb.co/Kz5fczV/Yellow-Apps-and-Technology-Business-Advertising-Website.jpg)](.)
 
 VEDR is a fullstack boilerplate build on top of ExpressJS and VueJS. Basically it's a MEVN stack at its base, but you can add any other database like mySQL or Firebase. It will be customizable and we will make it simpler, so you only install as you need.
 
