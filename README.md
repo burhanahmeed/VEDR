@@ -1,6 +1,16 @@
 
 # VEDR - A Fullstack Dynamic Rendering Boilerplate
+
+<div align='center'>
+
 [![VEDR](https://i.ibb.co/Kz5fczV/Yellow-Apps-and-Technology-Business-Advertising-Website.jpg)](.)
+
+</div>
+
+![release](https://badgen.net/github/release/burhanahmeed/vedr)
+![tags](https://badgen.net/github/tags/burhanahmeed/vedr)
+![node](https://badgen.net/badge/Node/v12.16.3/green)
+![license](https://badgen.net/badge/license/MIT/blue)
 
 VEDR is a fullstack boilerplate build on top of ExpressJS and VueJS. Basically it's a MEVN stack at its base, but you can add any other database like mySQL or Firebase. It will be customizable and we will make it simpler, so you only install as you need.
 
@@ -59,5 +69,12 @@ You can create `controllers`, `models`, or `routers` there. If you'd like to add
 
 ## __Have Fun!__
 
+## Issue
+
+If you find something wrong in this framework / boilerplate please submit [an issue](https://github.com/burhanahmeed/VEDR/issues).
+
 ## Contributing
 We are welcome all kind of contribution. Submit an issue or pull request if any. Or simply just share, star, or fork this project will be mean for me.
+
+## License
+MIT License Copyright (c) 2020 Burhanuddin Ahmed
