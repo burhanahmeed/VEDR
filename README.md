@@ -7,8 +7,8 @@
 
 </div>
 
-![release](https://badgen.net/github/release/burhanahmeed/vedr)
-![tags](https://badgen.net/github/tags/burhanahmeed/vedr)
+![release](https://badgen.net/github/release/burhanahmeed/VEDR)
+![tags](https://badgen.net/github/tags/burhanahmeed/VEDR)
 ![node](https://badgen.net/badge/Node/v12.16.3/green)
 ![license](https://badgen.net/badge/license/MIT/blue)
 
